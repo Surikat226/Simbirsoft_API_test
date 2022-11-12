@@ -7,6 +7,7 @@ data = MainData()
 
 class GetMethods(BasicMethods):
 
+    # Получить имена всех файлов и директорий на Яндекс.Диске пользователя
     def get_all_file_names(self):
         response = requests.get(url=f'{data.basic_url}{data.endpoints["files"]}',
                                 headers={'Authorization': f'OAuth {data.oauth_token}'})
